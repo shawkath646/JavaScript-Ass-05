@@ -9,9 +9,10 @@ const playersName = document.getElementById("players-name");
 
 var selectedPlayer = 0;
 
-const addPlayer = (name) => {
+const addPlayer = (name, btnId) => {
   selectedPlayer += 1;
-  playersName.innerText = playersName.innerHtml + `<li class="text-gray-400 text-xl mr-2"><p>${name}</p></li>`
+  playersName.innerHTML = playersName.innerHTML + `<li class="text-gray-400 text-xl mr-2"><p>${name}</p></li>`
+  document.getElementById(btnId).disabled = true;
 }
 
 calculateButton.addEventListener("click", function() {
